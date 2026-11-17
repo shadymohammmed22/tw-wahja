@@ -1,0 +1,678 @@
+{
+  "id": "933bd523-e54b-55dd-972c-82dcc98d882f",
+  "components": [
+    {
+      "title": "الواجهة الرئيسية",
+      "icon": "sicon-image-landscape",
+      "name": "wahja-hero",
+      "key": "d989b04b-7ecd-5d52-a13b-7925cbf99969",
+      "image": "",
+      "fields": [
+        {
+          "id": "eyebrow",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "نص صغير فوق العنوان",
+          "required": false,
+          "value": "عرض لفترة محدودة",
+          "maxLength": 120
+        },
+        {
+          "id": "title",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان الرئيسي",
+          "required": true,
+          "value": "خصم على أكثر القطع طلبًا",
+          "maxLength": 90
+        },
+        {
+          "id": "subtitle",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "textarea",
+          "label": "الوصف",
+          "required": false,
+          "value": "الكميات محدودة، والعرض بينتهي مع العدّاد.",
+          "maxLength": 220,
+          "rows": 3
+        },
+        {
+          "id": "cta_text",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "نص الزر",
+          "required": false,
+          "value": "شوفي العروض",
+          "maxLength": 30
+        },
+        {
+          "id": "cta_link",
+          "icon": "sicon-link",
+          "type": "string",
+          "format": "text",
+          "label": "رابط الزر",
+          "required": false,
+          "value": "#products",
+          "maxLength": 300,
+          "description": "رابط خارجي أو #products للنزول لقسم المنتجات"
+        },
+        {
+          "id": "image",
+          "icon": "sicon-image-landscape",
+          "type": "string",
+          "format": "image",
+          "label": "صورة الخلفية",
+          "required": false,
+          "value": ""
+        },
+        {
+          "id": "overlay",
+          "icon": "sicon-image-landscape",
+          "type": "number",
+          "label": "تعتيم الصورة (%)",
+          "required": false,
+          "value": 45,
+          "minimum": 0,
+          "maximum": 90,
+          "step": 5,
+          "inputType": "range"
+        },
+        {
+          "id": "align",
+          "icon": "sicon-align-center",
+          "type": "items",
+          "label": "محاذاة النص",
+          "format": "radio-list",
+          "required": false,
+          "options": [
+            {
+              "label": "بداية السطر",
+              "value": "start",
+              "key": "start"
+            },
+            {
+              "label": "توسيط",
+              "value": "center",
+              "key": "center"
+            }
+          ],
+          "selected": [
+            {
+              "label": "توسيط",
+              "value": "center",
+              "key": "center"
+            }
+          ]
+        },
+        {
+          "id": "accent",
+          "icon": "sicon-color-palette",
+          "format": "color",
+          "type": "string",
+          "inputType": "color",
+          "label": "اللون الرئيسي",
+          "required": false,
+          "value": "#C2185B"
+        },
+        {
+          "id": "end_date",
+          "icon": "sicon-calendar",
+          "type": "string",
+          "format": "datetime",
+          "inputType": "date",
+          "label": "نهاية العرض (عدّاد تنازلي اختياري)",
+          "required": false,
+          "value": ""
+        }
+      ]
+    },
+    {
+      "title": "المشكلة",
+      "icon": "sicon-help",
+      "name": "wahja-pain",
+      "key": "78002cf3-167d-58e8-a713-c7b9859d48dc",
+      "image": "",
+      "fields": [
+        {
+          "id": "eyebrow",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "نص صغير",
+          "required": false,
+          "value": "تعرفي الشعور ده",
+          "maxLength": 120
+        },
+        {
+          "id": "title",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "required": true,
+          "value": "ليه الاختيار بقى متعب؟",
+          "maxLength": 90
+        },
+        {
+          "id": "subtitle",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "textarea",
+          "label": "وصف",
+          "required": false,
+          "value": "",
+          "maxLength": 200,
+          "rows": 3
+        },
+        {
+          "id": "items",
+          "icon": "sicon-list",
+          "type": "collection",
+          "label": "النقاط",
+          "item_label": "نقطة",
+          "minLength": 1,
+          "maxLength": 4,
+          "value": [
+            {
+              "title": "خامات بتتبهدل من أول غسلة",
+              "text": "تدفعي كتير وبعدها القطعة تفقد شكلها بسرعة."
+            },
+            {
+              "title": "مقاسات مش واضحة",
+              "text": "تطلبي وانتي مش متأكدة، وتفضلي قلقانة من الإرجاع."
+            },
+            {
+              "title": "نفس الموديلات في كل مكان",
+              "text": "صعب تلاقي قطعة تحسّيها بتشبهك."
+            }
+          ],
+          "fields": [
+            {
+              "id": "title",
+              "icon": "sicon-format-text-alt",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان",
+              "required": true,
+              "value": "",
+              "maxLength": 60
+            },
+            {
+              "id": "text",
+              "icon": "sicon-format-text-alt",
+              "type": "string",
+              "format": "textarea",
+              "label": "وصف",
+              "required": false,
+              "value": "",
+              "maxLength": 160,
+              "rows": 3
+            }
+          ]
+        },
+        {
+          "id": "accent",
+          "icon": "sicon-color-palette",
+          "format": "color",
+          "type": "string",
+          "inputType": "color",
+          "label": "اللون الرئيسي",
+          "required": false,
+          "value": "#C2185B"
+        }
+      ]
+    },
+    {
+      "title": "المميزات",
+      "icon": "sicon-star",
+      "name": "wahja-features",
+      "key": "c55f3ab2-f350-582f-a827-3e6b0fdffeb2",
+      "image": "",
+      "fields": [
+        {
+          "id": "eyebrow",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "نص صغير",
+          "required": false,
+          "value": "الحل",
+          "maxLength": 120
+        },
+        {
+          "id": "title",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "required": true,
+          "value": "اللي هتلاقيه في كل قطعة",
+          "maxLength": 90
+        },
+        {
+          "id": "subtitle",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "textarea",
+          "label": "وصف",
+          "required": false,
+          "value": "",
+          "maxLength": 200,
+          "rows": 3
+        },
+        {
+          "id": "items",
+          "icon": "sicon-list",
+          "type": "collection",
+          "label": "المميزات",
+          "item_label": "ميزة",
+          "minLength": 1,
+          "maxLength": 4,
+          "value": [
+            {
+              "title": "خامة مريحة",
+              "text": "أقمشة بتتحمل الاستخدام اليومي وتحافظ على شكلها."
+            },
+            {
+              "title": "قصّات مدروسة",
+              "text": "مقاسات واضحة وجدول قياسات في كل منتج."
+            },
+            {
+              "title": "تصاميم مميزة",
+              "text": "تفاصيل بسيطة بتفرّق من غير ما تلفت زيادة."
+            },
+            {
+              "title": "شحن وإرجاع سهل",
+              "text": "سياسة واضحة قبل ما تطلبي."
+            }
+          ],
+          "fields": [
+            {
+              "id": "title",
+              "icon": "sicon-format-text-alt",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان",
+              "required": true,
+              "value": "",
+              "maxLength": 60
+            },
+            {
+              "id": "text",
+              "icon": "sicon-format-text-alt",
+              "type": "string",
+              "format": "textarea",
+              "label": "وصف",
+              "required": false,
+              "value": "",
+              "maxLength": 160,
+              "rows": 3
+            }
+          ]
+        },
+        {
+          "id": "accent",
+          "icon": "sicon-color-palette",
+          "format": "color",
+          "type": "string",
+          "inputType": "color",
+          "label": "اللون الرئيسي",
+          "required": false,
+          "value": "#C2185B"
+        }
+      ]
+    },
+    {
+      "title": "المنتجات",
+      "icon": "sicon-box",
+      "name": "wahja-products",
+      "key": "8be032bf-1825-53c6-b443-d288c932ec9e",
+      "image": "",
+      "fields": [
+        {
+          "id": "eyebrow",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "نص صغير",
+          "required": false,
+          "value": "العروض",
+          "maxLength": 120
+        },
+        {
+          "id": "title",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "required": true,
+          "value": "قطع بسعر خاص",
+          "maxLength": 90
+        },
+        {
+          "id": "subtitle",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "textarea",
+          "label": "وصف",
+          "required": false,
+          "value": "",
+          "maxLength": 200,
+          "rows": 3
+        },
+        {
+          "id": "cta_text",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "نص زر المنتج",
+          "required": false,
+          "value": "اختاري المقاس",
+          "maxLength": 24
+        },
+        {
+          "id": "products",
+          "icon": "sicon-box",
+          "type": "items",
+          "label": "المنتجات (حتى 8)",
+          "format": "dropdown-list",
+          "multichoice": true,
+          "searchable": true,
+          "required": true,
+          "source": "products",
+          "description": "اختار المنتجات اللي تظهر في الصفحة"
+        },
+        {
+          "id": "accent",
+          "icon": "sicon-color-palette",
+          "format": "color",
+          "type": "string",
+          "inputType": "color",
+          "label": "اللون الرئيسي",
+          "required": false,
+          "value": "#C2185B"
+        }
+      ]
+    },
+    {
+      "title": "آراء العملاء",
+      "icon": "sicon-chat",
+      "name": "wahja-testimonials",
+      "key": "b04f38f7-3d2b-5ec9-980d-6f1f50ec8a0b",
+      "image": "",
+      "fields": [
+        {
+          "id": "eyebrow",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "نص صغير",
+          "required": false,
+          "value": "آراء العملاء",
+          "maxLength": 120
+        },
+        {
+          "id": "title",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "required": true,
+          "value": "اللي قالوه بعد التجربة",
+          "maxLength": 90
+        },
+        {
+          "id": "items",
+          "icon": "sicon-list",
+          "type": "collection",
+          "label": "الآراء",
+          "item_label": "رأي",
+          "minLength": 1,
+          "maxLength": 6,
+          "value": [
+            {
+              "quote": "[اكتب هنا رأي عميل حقيقي]",
+              "name": "اسم العميل",
+              "meta": "المدينة"
+            },
+            {
+              "quote": "[اكتب هنا رأي عميل حقيقي]",
+              "name": "اسم العميل",
+              "meta": "المدينة"
+            },
+            {
+              "quote": "[اكتب هنا رأي عميل حقيقي]",
+              "name": "اسم العميل",
+              "meta": "المدينة"
+            }
+          ],
+          "fields": [
+            {
+              "id": "quote",
+              "icon": "sicon-format-text-alt",
+              "type": "string",
+              "format": "textarea",
+              "label": "التقييم",
+              "required": true,
+              "value": "",
+              "maxLength": 220,
+              "rows": 3
+            },
+            {
+              "id": "name",
+              "icon": "sicon-format-text-alt",
+              "type": "string",
+              "format": "text",
+              "label": "الاسم",
+              "required": false,
+              "value": "",
+              "maxLength": 40
+            },
+            {
+              "id": "meta",
+              "icon": "sicon-format-text-alt",
+              "type": "string",
+              "format": "text",
+              "label": "تفاصيل (المدينة مثلًا)",
+              "required": false,
+              "value": "",
+              "maxLength": 40
+            }
+          ]
+        },
+        {
+          "id": "accent",
+          "icon": "sicon-color-palette",
+          "format": "color",
+          "type": "string",
+          "inputType": "color",
+          "label": "اللون الرئيسي",
+          "required": false,
+          "value": "#C2185B"
+        }
+      ]
+    },
+    {
+      "title": "الأسئلة الشائعة",
+      "icon": "sicon-question-mark",
+      "name": "wahja-faq",
+      "key": "b17690a5-3e1d-5b39-9529-fb6e34e35aa0",
+      "image": "",
+      "fields": [
+        {
+          "id": "eyebrow",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "نص صغير",
+          "required": false,
+          "value": "أسئلة شائعة",
+          "maxLength": 120
+        },
+        {
+          "id": "title",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "required": true,
+          "value": "قبل ما تطلبي",
+          "maxLength": 90
+        },
+        {
+          "id": "items",
+          "icon": "sicon-list",
+          "type": "collection",
+          "label": "الأسئلة",
+          "item_label": "سؤال",
+          "minLength": 1,
+          "maxLength": 8,
+          "value": [
+            {
+              "question": "إزاي أختار المقاس؟",
+              "answer": "في صفحة كل منتج جدول قياسات. لو بين مقاسين، اختاري الأكبر."
+            },
+            {
+              "question": "مدة الشحن قد إيه؟",
+              "answer": "اكتب هنا مدة الشحن حسب مناطقك."
+            },
+            {
+              "question": "لو المقاس مش مظبوط؟",
+              "answer": "اكتب هنا سياسة الاستبدال والإرجاع الخاصة بمتجرك."
+            }
+          ],
+          "fields": [
+            {
+              "id": "question",
+              "icon": "sicon-format-text-alt",
+              "type": "string",
+              "format": "text",
+              "label": "السؤال",
+              "required": true,
+              "value": "",
+              "maxLength": 120
+            },
+            {
+              "id": "answer",
+              "icon": "sicon-format-text-alt",
+              "type": "string",
+              "format": "textarea",
+              "label": "الإجابة",
+              "required": true,
+              "value": "",
+              "maxLength": 400,
+              "rows": 3
+            }
+          ]
+        },
+        {
+          "id": "accent",
+          "icon": "sicon-color-palette",
+          "format": "color",
+          "type": "string",
+          "inputType": "color",
+          "label": "اللون الرئيسي",
+          "required": false,
+          "value": "#C2185B"
+        }
+      ]
+    },
+    {
+      "title": "دعوة أخيرة",
+      "icon": "sicon-shopping-bag",
+      "name": "wahja-cta",
+      "key": "046fb70f-71ac-5ab6-aaa9-f24b7f71d354",
+      "image": "",
+      "fields": [
+        {
+          "id": "title",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "required": true,
+          "value": "العرض مش هيستنّى",
+          "maxLength": 80
+        },
+        {
+          "id": "text",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "textarea",
+          "label": "وصف",
+          "required": false,
+          "value": "ثبّتي قطعتك قبل نهاية العدّاد.",
+          "maxLength": 160,
+          "rows": 3
+        },
+        {
+          "id": "cta_text",
+          "icon": "sicon-format-text-alt",
+          "type": "string",
+          "format": "text",
+          "label": "نص الزر",
+          "required": false,
+          "value": "تسوّقي العرض",
+          "maxLength": 30
+        },
+        {
+          "id": "cta_link",
+          "icon": "sicon-link",
+          "type": "string",
+          "format": "text",
+          "label": "رابط الزر",
+          "required": false,
+          "value": "#products",
+          "maxLength": 300,
+          "description": "رابط خارجي أو #products للنزول لقسم المنتجات"
+        },
+        {
+          "id": "points",
+          "icon": "sicon-list",
+          "type": "collection",
+          "label": "نقاط الطمأنة",
+          "item_label": "نقطة",
+          "minLength": 0,
+          "maxLength": 4,
+          "value": [
+            {
+              "text": "شحن سريع"
+            },
+            {
+              "text": "استبدال سهل"
+            },
+            {
+              "text": "دفع آمن"
+            }
+          ],
+          "fields": [
+            {
+              "id": "text",
+              "icon": "sicon-format-text-alt",
+              "type": "string",
+              "format": "text",
+              "label": "النص",
+              "required": false,
+              "value": "",
+              "maxLength": 40
+            }
+          ]
+        },
+        {
+          "id": "accent",
+          "icon": "sicon-color-palette",
+          "format": "color",
+          "type": "string",
+          "inputType": "color",
+          "label": "اللون الرئيسي",
+          "required": false,
+          "value": "#C2185B"
+        }
+      ]
+    }
+  ]
+}
